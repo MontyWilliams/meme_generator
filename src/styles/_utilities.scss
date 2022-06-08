@@ -1,4 +1,41 @@
-@mixin bg(){
+
+@mixin bg() {
   background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%)
 };
 
+// This mixin will be used to add a transitoion effect to the other mixins
+@mixin trans() {
+
+}
+
+
+
+@mixin nav_con_Lmix() {
+  // @include trans();
+  width: 140.79px;
+  height: 24px;
+  left: 58px;
+  top: 21px;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20.7482px;
+  line-height: 24px;
+  letter-spacing: -0.1em;
+  padding-bottom: 10px;
+
+}
+
+@mixin nav_con_Rmix() {
+  // @include trans();
+  width: 189px;
+  height: 14px;
+  left: 324px;
+  top: 25px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+}

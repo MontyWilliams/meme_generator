@@ -1,6 +1,13 @@
 @import 'utilities';
-@import 'nav_styles';
+// @import 'nav_styles';
 
-.nav_con {
-  // background-color: aqua;
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  border: 5px solid black;
 }
+
+
