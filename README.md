@@ -12,7 +12,7 @@ here I create a mixin for the backround of the header in a file called _utilitie
   background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%)
 };
 ```
-then, because sass compiles everything at once, I import it into the main sass
+then, I need to import the utility in each file that uses it
 ```
 @import 'utilities'
 ```
