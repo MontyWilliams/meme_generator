@@ -4,7 +4,7 @@ import Memes from '../memesData';
 
 export default function Meme() {
 
-  function getMemeImage() {
+  function getRandonMeme() {
     const memesArray = Memes.data.memes;
     // Get a random number based on the Array length
     const randomNumber = Math.floor(Math.random() * memesArray.length)
@@ -12,7 +12,15 @@ export default function Meme() {
     const {url} = memesArray[randomNumber]
     console.log(url)
   }
+  function printRandomMeme(){
+    const memesArray = Memes.data.memes;
+    const randomNumber = Math.floor(Math.random() * memesArray.length)
+    for (let i = 0; i < randomNumber; i++) {
+     const payDay = memesArray.map(thing => <p key={thing}>{thing}</p>)
+    }
+ 
 
+  }
 
   return(
     <div className="meme_con">
@@ -20,7 +28,8 @@ export default function Meme() {
       <input type="text" placeholder="yea" className="meme_in_1"/>
       <input type="text" placeholder="yea yea" className="meme_in_2"/>
 
-        <button onClick={getMemeImage} className="meme_btn">Get yo memes here Bru 🖼</button> 
+        <button onClick={printRandomMeme} className="meme_btn">Print a meme Bru 🖼</button> 
+        <button onClick={getRandonMeme} className="meme_btn">Random button</button> 
     </div>
   )
 } 
