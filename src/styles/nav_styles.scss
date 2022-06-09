@@ -5,15 +5,15 @@
  color: aliceblue;
  display: flex;
  flex-direction: row;
- justify-content: space-between;
  align-items: center;
  padding: 10px;
+ 
 }
 
 .nav_con_L {
   @include nav_con_Lmix();
   flex-basis: content;
-
+ 
   img {
     height: 2rem;
     border-radius: 50%;
@@ -23,6 +23,7 @@
 
 .nav_con_R {
   @include nav_con_Rmix();
-  flex-basis: content;
+  // flex-basis: content;
+  margin-right: auto;
 }
 

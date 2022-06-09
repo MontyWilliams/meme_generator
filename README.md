@@ -3,6 +3,11 @@ tutoriall from free code camp goes over event listeners and stat
 
 # Sass notes
 A few tidbits I noted during this proj
+### Css
+margin up right down left
+## importing syle sheets
+had issues with importing still sheets, for some reason when I import the nav sheet into the main style sheet
+I loose control over it 
 ## Mixins
 theses are like functions and add to the power of varibles
 here I create a mixin for the backround of the header in a file called _utilities

@@ -1,13 +1,12 @@
 @import 'utilities';
 // @import 'nav_styles';
+// @import 'meme_styles';
 
 .App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
-  border: 5px solid black;
+  // margin is up  right down left
+  // margin: 0px 0px 0px 0px;
+  width: 550px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 
