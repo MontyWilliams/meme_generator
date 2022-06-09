@@ -4,6 +4,7 @@
   display: grid;
   grid-template:  40px 40px / 1fr 1fr;
   margin: 36px 23px 15px 23px;
+  gap: 15px;
 
 
   .meme_btn {
@@ -12,7 +13,6 @@
     @include bg;
     @include meme_btn;
     @include meme_btn_txt;
-
     
   }
 
