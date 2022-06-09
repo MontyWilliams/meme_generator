@@ -6,8 +6,12 @@ export default function Meme() {
 
   function getMemeImage() {
     const memesArray = Memes.data.memes;
-    console.log(memesArray)
-}
+    // Get a random number based on the Array length
+    const randomNumber = Math.floor(Math.random() * memesArray.length)
+    // we destructure the object at the index and pull value by key
+    const {url} = memesArray[randomNumber]
+    console.log(url)
+  }
 
 
   return(
