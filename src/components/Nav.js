@@ -3,6 +3,8 @@ import '../styles/nav_styles.css';
 import logo from '../images/Logo.png';
 import Clock from './Clock'
 
+
+
 export default function Nav() {
   
   return(
@@ -14,7 +16,6 @@ export default function Nav() {
         </div>
         <div className="nav_con_R">
         <span>React Course - Project 3</span>
-        <Clock />
         </div>
       </div>
 

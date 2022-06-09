@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/meme_styles.css';
 import Memes from '../memesData';
 
+
 export default function Meme() {
 
   function getRandonMeme() {
@@ -23,13 +24,14 @@ export default function Meme() {
   }
 
   return(
+  <div>
     <div className="meme_con">
-     
       <input type="text" placeholder="yea" className="meme_in_1"/>
       <input type="text" placeholder="yea yea" className="meme_in_2"/>
 
         <button onClick={printRandomMeme} className="meme_btn">Print a meme Bru 🖼</button> 
         <button onClick={getRandonMeme} className="meme_btn">Random button</button> 
+    </div>
     </div>
   )
 } 
