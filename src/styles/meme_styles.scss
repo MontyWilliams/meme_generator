@@ -19,4 +19,8 @@
   input {
     @include meme_In_con;
   }
+
+}
+.meme_img_con {
+  @include meme_img;
 }
