@@ -6,7 +6,10 @@ import Memes from "../memesData";
 export default function Meme() {
 
   const [memeImage, setmemeImage] = React.useState("");
+  const [memeList, setmemeList] = React.useState([]);
+  console.log(memeList)
 
+  
   function getRandonMeme() {
     const memesArray = Memes.data.memes;
     // Get a random number based on the Array length
@@ -17,16 +20,15 @@ export default function Meme() {
   }
   function printRandomMeme() {
     const memesArray = Memes.data.memes;
-    const randomNumber = Math.floor(Math.random() * memesArray.length);
-    for (let i = 0; i < randomNumber; i++) {
-      const payDay = memesArray.map(thing =>
-        <p key={thing}>
-          {thing}
-        </p>
-      );
+    const memes_Array = [];
+    for (let i = 0; i < 3; i++) {
+      const randomNumber = Math.floor(Math.random() * memesArray.length);
+      memes_Array.push(memesArray[randomNumber]); 
+      setmemeList(memes_Array)
     }
   }
-
+  const memes_array_ran = memeList.map((this1) => <p> {this1}</p> );
+  
   return (
     <div>
       <div className="meme_con">
@@ -41,7 +43,17 @@ export default function Meme() {
         </button>
       </div>
       <div className="meme_img_con">
-        <img className="meme_img_con" src={memeImage} alt="" />
+        <img  src={memeImage} alt="" />
+      </div>
+      <div className="meme_list_con">
+      <span>
+        
+      {memeList.map((memes) => (
+        <p>{memes.name}</p>
+       
+    ))}
+      </span>
+
       </div>
     </div>
   );

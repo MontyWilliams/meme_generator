@@ -475,7 +475,7 @@ export default {
               "box_count": 2
           },
           {
-              "id": "14371066",
+              "id": "14371066", 
               "name": "Star Wars Yoda",
               "url": "https://i.imgflip.com/8k0sa.jpg",
               "width": 620,

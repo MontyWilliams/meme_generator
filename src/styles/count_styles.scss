@@ -1,12 +1,17 @@
 @import 'utilities';
 
+.countImg {
+  height: 20px;
+  width: 20px;
+  
+}
 
 .counter {
   margin-right: auto;
   margin-left: 80%;
   display: flex;
   align-items: flex-end;
-  margin-top: 100px;
+
 }
 
 .counter > button {
