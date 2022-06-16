@@ -45,3 +45,10 @@ It is never good to call a curent state directly when updating a value (somethin
         setCount(prevCount => prevCount + 1)
     }
 ```
+### spread Syntax ...
+using this operator automatically returns all the elements in an array or obj
+```
+const thingArray = ["thing 1", "thing 2", "thing 3"]
+...thingArray
+// returnsv"thing 1", "thing 2", "thing 3"
+```
