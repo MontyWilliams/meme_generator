@@ -47,6 +47,7 @@ It is never good to call a curent state directly when updating a value (somethin
 ```
 ### spread Syntax ...
 using this operator automatically returns all the elements in an array or obj
+when using this operator use the {} because we need to switch to jsx
 ```
 const thingArray = ["thing 1", "thing 2", "thing 3"]
 ...thingArray
