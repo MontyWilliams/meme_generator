@@ -1,0 +1,29 @@
+@import 'utilities';
+
+.meme_con {
+  display: grid;
+  grid-template:  40px 40px / 1fr 1fr;
+  margin: 36px 23px 15px 23px;
+  gap: 15px;
+  
+  
+  .meme_btn {
+    grid-column: 1 / -1;
+    margin-bottom: 21px;
+    @include bg;
+    @include meme_btn;
+    @include meme_btn_txt;
+    
+  }
+
+  input {
+    @include meme_In_con;
+    text-indent: 5px;
+  }
+
+}
+.meme_img_con {
+  @include meme_img;
+  
+}
+

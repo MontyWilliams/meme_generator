@@ -1,0 +1,5 @@
+@import 'utilities';
+
+.footer_con {
+  @include bg();
+}

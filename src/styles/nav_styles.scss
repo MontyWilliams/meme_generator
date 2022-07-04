@@ -1,0 +1,29 @@
+@import 'utilities';
+
+.nav_con{
+ @include bg();
+ color: aliceblue;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ padding: 10px;
+ 
+}
+
+.nav_con_L {
+  @include nav_con_Lmix();
+  flex-basis: content;
+ 
+  img {
+    height: 2rem;
+    border-radius: 50%;
+    padding-right: 3px
+  }
+}
+
+.nav_con_R {
+  @include nav_con_Rmix();
+  // flex-basis: content;
+  margin-left: auto;
+}
+
