@@ -50,9 +50,9 @@ export default function Meme(props) {
       </div>
       <div className="memeDisplay">
         <img className="meme_img_con" src={meme.randomImage} alt="" />
-          <div className="memeTextDisplay">
-            <h2 className="top">{meme.topText}</h2> 
-            <h2 className="bottom" >{meme.bottomText}</h2> 
+          <div >
+            <h2 className=" top">{meme.topText}</h2> 
+            <h2 className=" bottom" >{meme.bottomText}</h2> 
           </div>
       </div>
     

@@ -24,23 +24,30 @@
 }
 .meme_img_con {
   @include meme_img;
+  // position: fixed;
+  max-width: 500px;
+  max-height: 500px;
   
 }
 
 .bottom {
-  bottom: 20%;
+  position: relative;
+  bottom: 8rem;
 }
 
 .top {
-  top: 30%;
+
+  position: absolute;
+  top: 12rem;
 }
 
 .memeDisplay{
   // position: relative;
-  justify-content: initial;
+  // justify-content: initial;
 }
+
 .memeDisplay h2{
-  position: fixed;
+  // position: fixed;
   @include meme_text;
 }
 

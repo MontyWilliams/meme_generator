@@ -78,16 +78,17 @@ color: #FFFFFF;
   transition: 3s;
   width: 100%;
   border-radius: 5px;
-  height: 50%;
+  height: 100%;
 }
 
 @mixin meme_text {
-  // max-width: inherit;
   // position: fixed;
   // top: 50%;
-  left: 50%;
-  transform: translate(-50%,);
+  // left: 50%;
+  display: inline-block;
+  // transform: translate(-50%,);
   text-align: center;
+  vertical-align: middle;
   inline-size: 500px;
   overflow-wrap: break-word;
   // margin: 15px 0;
