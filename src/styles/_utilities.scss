@@ -79,6 +79,7 @@ color: #FFFFFF;
   width: 100%;
   border-radius: 5px;
   height: 100%;
+  
 }
 
 @mixin meme_text {
@@ -92,7 +93,6 @@ color: #FFFFFF;
   inline-size: 500px;
   overflow-wrap: break-word;
   // margin: 15px 0;
-  padding: 0 5px;
   font-family: impact, sans-serif;
   font-size: 2em;
   text-transform: uppercase;

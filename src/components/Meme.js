@@ -39,7 +39,7 @@ export default function Meme(props) {
  
   
   return (
-    <div>
+    <div  className="wrap">
       <div className="meme_con">
         
         <input type="text" placeholder="Top text" className="meme_in_1" name="topText" value={meme.topText} onChange={handleChange}/>
@@ -47,6 +47,7 @@ export default function Meme(props) {
         <button onClick={getRandomMeme} className="meme_btn">
           Random button 🖼
         </button>
+        
       </div>
       <div className="memeDisplay">
         <img className="meme_img_con" src={meme.randomImage} alt="" />
