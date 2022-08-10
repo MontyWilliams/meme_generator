@@ -3,16 +3,13 @@ import "../styles/meme_styles.css";
 import Memes from "../memesData";
 
 
-export default function Meme() {
+export default function Meme(props) {
 
   const [meme, setMeme] = React.useState({
     topText: "",
     bottomText: "",
     randomImage: "http://i.imgflip.com/1bij.jpg"
   });
-
-  const [memeImg, setMemeImg] = React.useState([]);
-  
 
   
   function getRandomMeme() {
@@ -21,21 +18,42 @@ export default function Meme() {
     const randomNumber = Math.floor(Math.random() * memesArray.length);
     // we destructure the object at the index and pull value by key
     const { url } = memesArray[randomNumber];
+    setMeme(e => {
+      return{
+        ...e,
+        randomImage: url
+        
+      }
+    })
    
+  }
+  
+  function handleChange(event){
+    const {name, value} = event.target
+    setMeme(e => ({
+      ...e,
+      [name]: value
+      
+    }))
   }
  
   
   return (
     <div>
       <div className="meme_con">
-        <input type="text" placeholder="yea" className="meme_in_1" />
-        <input type="text" placeholder="yea yea" className="meme_in_2" />
+        
+        <input type="text" placeholder="Top text" className="meme_in_1" name="topText" value={meme.topText} onChange={handleChange}/>
+        <input type="text" placeholder="Bottom text" className="meme_in_2" name="bottomText" value={meme.bottomText} onChange={handleChange}/>
         <button onClick={getRandomMeme} className="meme_btn">
           Random button 🖼
         </button>
       </div>
-      <div className="meme_img_con">
-        {/* <img  src={memeImage} alt="" /> */}
+      <div className="memeDisplay">
+        <img className="meme_img_con" src={meme.randomImage} alt="" />
+          <div className="memeTextDisplay">
+            <h2 className="top">{meme.topText}</h2> 
+            <h2 className="bottom" >{meme.bottomText}</h2> 
+          </div>
       </div>
     
     </div>

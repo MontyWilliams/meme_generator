@@ -27,3 +27,20 @@
   
 }
 
+.bottom {
+  bottom: 20%;
+}
+
+.top {
+  top: 30%;
+}
+
+.memeDisplay{
+  // position: relative;
+  justify-content: initial;
+}
+.memeDisplay h2{
+  position: fixed;
+  @include meme_text;
+}
+

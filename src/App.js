@@ -3,6 +3,8 @@ import Nav  from "./components/Nav";
 import Meme from "./components/Meme";
 import Footer from "./components/Footer";
 
+
+
 import './styles/styles.css';
 
 function App() {

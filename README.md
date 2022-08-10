@@ -45,7 +45,7 @@ It is never good to call a curent state directly when updating a value (somethin
         setCount(prevCount => prevCount + 1)
     }
 ```
-### spread Syntax ...
+## spread Syntax ...
 using this operator automatically returns all the elements in an array or obj
 when using this operator use the {} because we need to switch to jsx
 ```
@@ -53,3 +53,8 @@ const thingArray = ["thing 1", "thing 2", "thing 3"]
 ...thingArray
 // returnsv"thing 1", "thing 2", "thing 3"
 ```
+### Returning an object
+when returning an object jsx needs to be wrapped in parenthesis ({})
+
+# Moonshot
+if remove the derived state and lift it to the top as i set it i can pass the stat to the header and footer and maybe display the top text in the head and the bottm text in the footer. just to see is=f I can and it may look cool to
