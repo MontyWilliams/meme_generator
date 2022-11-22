@@ -20,11 +20,10 @@ export default function Meme(props) {
   }, [])
 
   function getRandomMeme() {
-    const memesArray = Memes;
     // Get a random number based on the Array length
-    const randomNumber = Math.floor(Math.random() * memesArray.length);
+    const randomNumber = Math.floor(Math.random() * Memes.length);
     // we destructure the object at the index and pull value by key
-    const { url } = memesArray[randomNumber];
+    const { url } = Memes[randomNumber];
     setMeme(e => {
       return{
         ...e,
