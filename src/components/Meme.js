@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/meme_styles.css";
-import Memes from "../memesData";
+// import Memes from "../memesData";
 
 
 export default function Meme(props) {
@@ -11,9 +11,16 @@ export default function Meme(props) {
     randomImage: "http://i.imgflip.com/1bij.jpg"
   });
 
-  
+  const [Memes, setAllMemes] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch("https://api.imgflip.com/get_memes")
+    .then(res => res.json())
+    .then(data => setAllMemes(data.data.memes))
+  }, [])
+
   function getRandomMeme() {
-    const memesArray = Memes.data.memes;
+    const memesArray = Memes;
     // Get a random number based on the Array length
     const randomNumber = Math.floor(Math.random() * memesArray.length);
     // we destructure the object at the index and pull value by key
