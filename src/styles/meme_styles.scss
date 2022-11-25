@@ -36,19 +36,23 @@
   
 }
 
-.bottom {
-  position: relative;
-  bottom: 8rem;
-}
 
-.top {
-
+.topText {
   position: absolute;
-  top: 12rem;
+  top: 45px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+.bottomText {
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 .memeDisplay{
-  // position: relative;
+  position: relative;
   // display: inline;
   // align-self: center;
   display: block;
