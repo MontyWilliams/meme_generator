@@ -93,10 +93,10 @@ export default function Meme(props) {
         
       </div>
       <div className="memeDisplay" ref={ref} >
-        <div className="overlay">
-          918dcx.com
-        </div>
         <img className="meme_img_con" src={meme.randomImage} alt=""/>
+        <div className="overlay">
+          Montywilliams.tech
+        </div>
           <div className="topText">
             <h2 >{meme.topText}</h2> 
           </div>
