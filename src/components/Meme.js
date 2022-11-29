@@ -1,15 +1,12 @@
 import React, { createRef, useRef, useState } from 'react'
 import "../styles/meme_styles.css";
+import downloadjs from 'downloadjs'
 import {render} from 'react-dom';
 import * as htmlToImage from 'html-to-image';
 
 
-
-
-
 export default function Meme(props) {
 
-  
   const ref = React.createRef(null)
 
   const getImage = () => {
@@ -17,13 +14,14 @@ export default function Meme(props) {
       .then(function(dataUrl){
         var img = new Image()
         img.src = dataUrl
-        document.body.appendChild(img)
+        // document.body.appendChild(img)
+        downloadjs(dataUrl, 'download.png', 'image/png')
       })
       .catch((error) => {
         console.log(error)
       })
-    console.log('getImage')
-    
+
+        
   }
 
   const [meme, setMeme] = React.useState({
@@ -34,22 +32,22 @@ export default function Meme(props) {
 
   const [Memes, setAllMemes] = React.useState([]);
 
-  
+  // console.log(Memes)
   React.useEffect(() => {
-    fetch("https://api.imgflip.com/get_memes")
+    fetch("https://rickandmortyapi.com/api/character")
     .then(res => res.json())
-    .then(data => setAllMemes(data.data.memes))
+    .then(data => setAllMemes(data.results))
   }, [])
 
   function getRandomMeme() {
     // Get a random number based on the Array length
     const randomNumber = Math.floor(Math.random() * Memes.length);
     // we destructure the object at the index and pull value by key
-    const { url } = Memes[randomNumber];
+    const { image } = Memes[randomNumber];
     setMeme(e => {
       return{
         ...e,
-        randomImage: url  
+        randomImage: image
       }
     })  
   }
@@ -85,6 +83,13 @@ export default function Meme(props) {
           Random button 🖼
         </button>       
       </div>
+          
+          
+      <div className="mem_con">
+      <button onClick={getImage} className="meme_btn">
+          Random button 🖼
+        </button>
+      </div>
       <div className="memeDisplay" ref={ref} >
         <img className="meme_img_con" src={meme.randomImage} alt=""/>
           <div className="topText">
@@ -94,12 +99,6 @@ export default function Meme(props) {
             <h2 >{meme.bottomText}</h2> 
           </div>
       </div>
-
-      <button onClick={getImage} className="meme_btn">
-          Random button 🖼
-        </button>
-
-          
     </div>
   );
 }
