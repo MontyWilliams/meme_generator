@@ -15,7 +15,7 @@ export default function Nav() {
         <span>Meme Generator</span>
         </div>
         <div className="nav_con_R">
-        <span>React Course - Project 3</span>
+        <span>Start Trending Now!</span>
       <Clock />
         </div>
       </div>

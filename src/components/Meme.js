@@ -1,15 +1,12 @@
 import React, { createRef, useRef, useState } from 'react'
 import "../styles/meme_styles.css";
+import downloadjs from 'downloadjs'
 import {render} from 'react-dom';
 import * as htmlToImage from 'html-to-image';
 
 
-
-
-
 export default function Meme(props) {
 
-  
   const ref = React.createRef(null)
 
   const getImage = () => {
@@ -17,13 +14,14 @@ export default function Meme(props) {
       .then(function(dataUrl){
         var img = new Image()
         img.src = dataUrl
-        document.body.appendChild(img)
+        // document.body.appendChild(img)
+        downloadjs(dataUrl, 'download.png', 'image/png')
       })
       .catch((error) => {
         console.log(error)
       })
-    console.log('getImage')
-    
+
+        
   }
 
   const [meme, setMeme] = React.useState({
@@ -82,10 +80,22 @@ export default function Meme(props) {
           />
 
         <button onClick={getRandomMeme} className="meme_btn">
-          Random button 🖼
+          Get meme
         </button>       
       </div>
+          
+          
+      <div className="mem_con">
+      <button onClick={getImage} className="meme_btn">
+          Save
+        </button>
+        <br />
+        
+      </div>
       <div className="memeDisplay" ref={ref} >
+        <div className="overlay">
+          918dcx.com
+        </div>
         <img className="meme_img_con" src={meme.randomImage} alt=""/>
           <div className="topText">
             <h2 >{meme.topText}</h2> 
@@ -94,12 +104,6 @@ export default function Meme(props) {
             <h2 >{meme.bottomText}</h2> 
           </div>
       </div>
-
-      <button onClick={getImage} className="meme_btn">
-          Random button 🖼
-        </button>
-
-          
     </div>
   );
 }

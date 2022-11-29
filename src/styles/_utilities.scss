@@ -1,6 +1,6 @@
 
 @mixin bg() {
-  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%)
+  background: linear-gradient(90deg, #2a8022 1.18%, #268ed3 100%)
 };
 @mixin glow() {
   border-radius: 10px;
@@ -95,6 +95,7 @@ color: #FFFFFF;
   // margin: 15px 0;
   font-family: impact, sans-serif;
   font-size: 2em;
+  list-style-type: none;
   text-transform: uppercase;
   color: white;
   letter-spacing: 1px;
