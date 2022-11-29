@@ -1,7 +1,6 @@
-import React, { createRef, useRef, useState } from 'react'
+import React from 'react'
 import "../styles/meme_styles.css";
 import downloadjs from 'downloadjs'
-import {render} from 'react-dom';
 import * as htmlToImage from 'html-to-image';
 
 

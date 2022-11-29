@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
-import { BsFillPersonLinesFill } from 'react-icons/bs'
+
 
 import '../styles/footer_styles.css';
 
