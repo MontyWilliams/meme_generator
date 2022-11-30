@@ -1,7 +1,7 @@
 import React from 'react'
 import Nav  from "./components/Nav";
 import Meme from "./components/Meme";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 
 
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
      <Nav />
      <Meme />
-     <Footer />
+     {/* <Footer /> */}
     </div>
   );
 }
